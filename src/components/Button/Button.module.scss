@@ -1,0 +1,30 @@
+@use '@/styles/vars.module.scss' as vars;
+@use '@/styles/mixins/flex.module.scss' as mixin;
+
+.button {
+  height: 53px;
+  display: block;
+  padding: 15px 40px;
+  border: 2px solid vars.$white;
+  transform: skew(-50deg);
+  background-color: vars.$red;
+
+  > .container {
+    @include mixin.flex($ai: center, $g: 10px);
+    transform: skew(50deg);
+
+    > .title {
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: vars.$white;
+    }
+
+    > .icon {
+      color: vars.$white;
+    }
+  }
+
+  &:hover {
+    background-color: vars.$redHover;
+  }
+}
