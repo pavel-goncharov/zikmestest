@@ -24,3 +24,9 @@ input {
   transform: skew(50deg);
   background-color: transparent;
 }
+
+@media (max-width: 576px) {
+  label, input {
+    transform: skew(0deg);
+  }
+}

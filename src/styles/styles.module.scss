@@ -1,3 +1,5 @@
+@use '@/styles/mixins/flex.module.scss' as mixin;
+
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +8,14 @@
 
 button {
   cursor: pointer;
+}
+
+main {
+  height: 100vh;
+  background-image: url('@/assets/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  @include mixin.flex($jc: center, $ai: center);
 }

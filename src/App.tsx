@@ -1,11 +1,23 @@
 import {FC} from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faArrowRight} from "@fortawesome/free-solid-svg-icons/faArrowRight";
+import {faArrowRight} from '@fortawesome/free-solid-svg-icons/faArrowRight';
+import Form from '@/components/Form/Form';
+import Input from '@/components/Input/Input';
+import Button, {BtnTypes} from '@/components/Button/Button';
 
 const App: FC = () => {
   return (
     <main>
-      <FontAwesomeIcon icon={faArrowRight}/>
+      <Form>
+        <Input
+          placeholder='Ваш номер...'
+        />
+        <Button
+          type={BtnTypes.SUBMIT}
+          title='Заказать'
+          icon={faArrowRight}
+          handler={alert}
+        />
+      </Form>
     </main>
   );
 };
