@@ -13,7 +13,7 @@ interface IButton {
   type?: BtnTypes;
   title?: string;
   icon?: IconDefinition;
-  handler: () => void;
+  handler: (arg: any) => void;
 }
 
 const Button: FC<IButton> = (props) => {
