@@ -1,0 +1,26 @@
+@use '@/styles/vars.module.scss' as vars;
+@use '@/styles/mixins/flex.module.scss' as mixin;
+
+@mixin notification($backgroundColor, $color) {
+  height: 50px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  background-color: $backgroundColor;
+  color: $color;
+  @include mixin.flex($ai: center, $jc: center);
+}
+
+.notificationInit {
+  height: 50px;
+  opacity: 0;
+}
+
+.notification {
+  @include notification($backgroundColor: vars.$white, $color: vars.$green);
+  opacity: 1;
+}
+
+.notificationError {
+  @include notification($backgroundColor: vars.$white, $color: vars.$red);
+  opacity: 1;
+}
