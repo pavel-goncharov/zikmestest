@@ -1,0 +1,36 @@
+@use '@/styles/vars.module.scss' as vars;
+
+label {
+  display: inline-block;
+  width: 300px;
+  padding: 3px 20px;
+  height: 53px;
+  border: 2px solid vars.$white;
+  opacity: 0.9;
+  transform: skew(-50deg);
+  background-color: vars.$grayLight;
+  color: vars.$gray;
+}
+
+input {
+  position: relative;
+  top: -3px;
+  left: 10px;
+  height: 49px;
+  width: 236px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  transform: skew(50deg);
+  background-color: transparent;
+}
+
+@media (max-width: 576px) {
+  label {
+    width: 220px;
+  }
+
+  label, input {
+    transform: skew(0deg);
+  }
+}

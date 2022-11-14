@@ -1,0 +1,5 @@
+@use '@/styles/mixins/flex.module.scss' as mixin;
+
+form {
+  @include mixin.flex($jc: center, $fw: wrap, $g: 15px 0);
+}

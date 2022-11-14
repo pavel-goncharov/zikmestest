@@ -1,0 +1,12 @@
+@use '@/styles/mixins/flex.module.scss' as mixin;
+
+main {
+  height: 100vh;
+  padding: 0 10px;
+  background-image: url('@/assets/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  @include mixin.flex($fd: column, $ai: center, $jc: center, $g: 20px);
+}
